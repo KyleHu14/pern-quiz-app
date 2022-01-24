@@ -21,6 +21,20 @@ app.get("/quiz", async (req, res) => {
     }
 });
 
+// Get a specific quiz question
+app.get("/quiz/:id", async (req, res) => {
+    try {
+        const { id } = req.params;
+        const question = await pool.query(
+            "SELECT * FROM quizQuestions WHERE questionId = $1",
+            [id]
+        );
+        res.json(question.rows[0]);
+    } catch (error) {
+        console.error(error.message);
+    }
+});
+
 // Add a quiz question
 app.post("/quiz", async (req, res) => {
     try {
@@ -31,6 +45,35 @@ app.post("/quiz", async (req, res) => {
         );
 
         res.json(newQuestion.rows[0]);
+    } catch (error) {
+        console.error(error.message);
+    }
+});
+
+// Update a question
+app.put("/quiz/:id", async (req, res) => {
+    try {
+        const { id } = req.params;
+        const { questionBody, questionAnswer } = req.body;
+        const updatedQuestion = await pool.query(
+            "UPDATE quizQuestions SET questionBody = $1, questionAnswer = $2 WHERE questionId = $3",
+            [questionBody, questionAnswer, id]
+        );
+        res.json("Question Updated");
+    } catch (error) {
+        console.error(error.message);
+    }
+});
+
+// Delete a question
+app.delete("/quiz/:id", async (req, res) => {
+    try {
+        const { id } = req.params;
+        const deleteQuestion = await pool.query(
+            "DELETE FROM quizQuestions WHERE questionId = $1",
+            [id]
+        );
+        res.json("Question Deleted");
     } catch (error) {
         console.error(error.message);
     }
