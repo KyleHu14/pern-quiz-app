@@ -30,12 +30,55 @@
     margin-bottom: 5%;
 }
 
-.submit-control {
+.btn {
+    /* Sizing */
+    margin-top: 2vh;
     margin-bottom: 3vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+
+    /* Transition Duration */
+    transition-duration: 0.4s;
+
+    /* Text */
+    font-size: 1.5vw;
+    color: white;
+
+    /* Coloring */
+    background-color: #3758a7;
+    border: 2px solid #3758a7;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    background-color: #274690;
+    border: 2px solid #274690;
+    border-radius: 10px;
 }
 
 input {
-    width: 100%;
+    /* Sizing */
+    width: 90%;
+    margin-top: 3%;
+    padding: 10px;
+
+    /* Background */
+    background: transparent;
+
+    /* Text */
+    color: white;
+    font-size: 1.5vw;
+
+    /* Coloring */
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+label {
+    /* Text */
+    font-size: 1.5vw;
 }
 
 h1 {
