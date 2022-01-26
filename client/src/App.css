@@ -1,8 +1,48 @@
-.container {
-    border: 3px solid #1b264f;
+.title {
+    text-align: center;
+    font-size: 3vw;
 }
 
-.test {
+.container {
+    /* Spacing */
+    margin: 10vh;
+
+    /* Border */
+    border: 1px solid #3f3a35;
+    border-radius: 40px;
+
+    /* Color */
+    background-color: #3f3a35;
+
+    /* Flex Box */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-control {
     text-align: center;
-    font-size: 4vw;
+    width: 20%;
+}
+
+.input-group {
+    margin-bottom: 5%;
+}
+
+.submit-control {
+    margin-bottom: 3vh;
+}
+
+input {
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+}
+
+body {
+    font-family: Verdana;
+    color: white;
 }
