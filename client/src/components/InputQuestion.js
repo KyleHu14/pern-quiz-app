@@ -45,7 +45,7 @@ const InputQuestion = () => {
                         onChange={(e) => setQuestionAnswer(e.target.value)}
                     />
                 </div>
-                <button className="btn" type="submit">
+                <button className="btn btn-normal" type="submit">
                     Add Question
                 </button>
             </form>

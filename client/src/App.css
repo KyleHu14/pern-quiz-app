@@ -5,7 +5,9 @@
 
 .container {
     /* Spacing */
-    margin: 10vh;
+    margin-top: 5vh;
+    margin-left: 10vh;
+    margin-right: 10vh;
 
     /* Border */
     border: 1px solid #3f3a35;
@@ -31,31 +33,83 @@
 }
 
 .btn {
-    /* Sizing */
-    margin-top: 2vh;
-    margin-bottom: 3vh;
-    padding-top: 1vh;
+    /* padding-top: 1vh;
     padding-bottom: 1vh;
     padding-left: 2vw;
-    padding-right: 2vw;
+    padding-right: 2vw; */
+
+    /* Text */
+    text-align: center;
 
     /* Transition Duration */
     transition-duration: 0.4s;
+}
 
-    /* Text */
-    font-size: 1.5vw;
-    color: white;
-
+.btn-normal {
     /* Coloring */
     background-color: #3758a7;
     border: 2px solid #3758a7;
     border-radius: 10px;
+
+    /* Sizing */
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+    padding: auto;
+    padding: 1vh;
+
+    /* Text */
+    font-size: 1.5vw;
+    color: white;
 }
 
-.btn:hover {
+.btn-normal:hover {
     background-color: #274690;
     border: 2px solid #274690;
     border-radius: 10px;
+}
+
+.btn-danger {
+    /* Sizing */
+    width: 15%;
+    padding: 1vh;
+    float: right;
+
+    /* Text */
+    font-size: 1vw;
+    color: white;
+
+    /* Coloring */
+    background-color: #c03737;
+    border: 2px solid #c03737;
+    border-radius: 10px;
+}
+
+.btn-danger:hover {
+    background-color: #a52c2c;
+    border: 2px solid #a52c2c;
+    border-radius: 10px;
+}
+
+.question-text {
+    float: left;
+}
+
+.question-control {
+    /* Positioning */
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding: 1%;
+
+    /* Color */
+    background-color: #5c5751;
+    border-radius: 10px;
+
+    /* Sizing */
+    width: 45%;
+}
+
+.question-body {
+    font-weight: bold;
 }
 
 input {
@@ -82,7 +136,24 @@ label {
 }
 
 h1 {
+    /* Size */
+    width: 50vw;
+
+    /* Border */
+    border: 1px solid #3f3a35;
+    border-radius: 40px;
+
+    /* Color */
+    background-color: #3f3a35;
+
+    /* Text */
+    color: whitesmoke;
+
+    /* Positioning */
     text-align: center;
+    margin-left: 25vw;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 
 body {

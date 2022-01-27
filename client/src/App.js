@@ -1,13 +1,20 @@
+import { Fragment } from "react";
 import Title from "./components/Title";
 import InputQuestion from "./components/InputQuestion";
+import DisplayQuestion from "./components/DisplayQuestion";
 import "./App.css";
 
 function App() {
     return (
-        <div className="container">
+        <Fragment>
             <Title titleName={"Quiz App"} />
-            <InputQuestion />
-        </div>
+            <div className="container">
+                <InputQuestion />
+            </div>
+            <div className="container">
+                <DisplayQuestion />
+            </div>
+        </Fragment>
     );
 }
 
